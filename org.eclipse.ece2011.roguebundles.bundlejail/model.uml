@@ -1,0 +1,1107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_J3i48P_tEeC36v2Jr-YNEw" name="bundlejail">
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i48f_tEeC36v2Jr-YNEw" name="boolean"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i48v_tEeC36v2Jr-YNEw" name="byte"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i48__tEeC36v2Jr-YNEw" name="char"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i49P_tEeC36v2Jr-YNEw" name="double"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i49f_tEeC36v2Jr-YNEw" name="float"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3i49v_tEeC36v2Jr-YNEw" name="int"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3jgAP_tEeC36v2Jr-YNEw" name="long"/>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_J3jgAf_tEeC36v2Jr-YNEw" name="short"/>
+  <packagedElement xmi:type="uml:Package" xmi:id="_J3jgAv_tEeC36v2Jr-YNEw" name="org">
+    <packagedElement xmi:type="uml:Package" xmi:id="_J3jgA__tEeC36v2Jr-YNEw" name="eclipse">
+      <packagedElement xmi:type="uml:Package" xmi:id="_J3jgBP_tEeC36v2Jr-YNEw" name="ece2011">
+        <packagedElement xmi:type="uml:Package" xmi:id="_J3jgBf_tEeC36v2Jr-YNEw" name="roguebundles">
+          <packagedElement xmi:type="uml:Package" xmi:id="_J3jgBv_tEeC36v2Jr-YNEw" name="bundlejail" clientDependency="_KFDwgv_tEeC36v2Jr-YNEw _KFDwg__tEeC36v2Jr-YNEw _KFDwhP_tEeC36v2Jr-YNEw _KFDwhf_tEeC36v2Jr-YNEw">
+            <packagedElement xmi:type="uml:Class" xmi:id="_J3kHEP_tEeC36v2Jr-YNEw" name="BundleJailCell">
+              <elementImport xmi:id="_J3nxc__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3nxcv_tEeC36v2Jr-YNEw"/>
+              <elementImport xmi:id="_J3oYgP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3nxdP_tEeC36v2Jr-YNEw"/>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J3vGMP_tEeC36v2Jr-YNEw" name="matches" specification="_J3tRAP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J3vGMf_tEeC36v2Jr-YNEw" name="toCheck" type="_J3kHEP_tEeC36v2Jr-YNEw"/>
+                <ownedParameter xmi:id="_J3vGMv_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                <language>JAVA</language>
+                <body>&#xD;
+		return name.equals(toCheck.name);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J3z-sP_tEeC36v2Jr-YNEw" name="isDefault" specification="_J3xicP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J3z-sf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                <language>JAVA</language>
+                <body>&#xD;
+		return matchesDefault(name);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J34QIP_tEeC36v2Jr-YNEw" name="toString" specification="_J32a8v_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J34QIf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                <language>JAVA</language>
+                <body>&#xD;
+		return &quot;BundleJailCell [&quot; + name + &quot;]&quot;;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J376gP_tEeC36v2Jr-YNEw" name="getName" specification="_J36sYP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J376gf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                <language>JAVA</language>
+                <body>&#xD;
+		return name;&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_J3tRAP_tEeC36v2Jr-YNEw" name="matches" visibility="public" method="_J3vGMP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J3tRAf_tEeC36v2Jr-YNEw" name="toCheck" type="_J3kHEP_tEeC36v2Jr-YNEw"/>
+                <ownedParameter xmi:id="_J3tRAv_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_J3xicP_tEeC36v2Jr-YNEw" name="isDefault" visibility="public" method="_J3z-sP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J3xicf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_J32a8v_tEeC36v2Jr-YNEw" name="toString" visibility="public" method="_J34QIP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J32a8__tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+              </ownedOperation>
+              <ownedOperation xmi:id="_J36sYP_tEeC36v2Jr-YNEw" name="getName" visibility="public" method="_J376gP_tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:id="_J36sYf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="_J3kHEf_tEeC36v2Jr-YNEw" name="BundleJailCellFilter" isAbstract="true">
+              <elementImport xmi:id="_J39vsv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+              <elementImport xmi:id="_J39vtP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vs__tEeC36v2Jr-YNEw"/>
+              <elementImport xmi:id="_J39vt__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vtv_tEeC36v2Jr-YNEw"/>
+              <elementImport xmi:id="_J3-Wwf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+              <ownedTemplateSignature xmi:type="uml:RedefinableTemplateSignature" xmi:id="_J3kHEv_tEeC36v2Jr-YNEw" parameter="_J3kHE__tEeC36v2Jr-YNEw">
+                <ownedParameter xmi:type="uml:ClassifierTemplateParameter" xmi:id="_J3kHE__tEeC36v2Jr-YNEw" parameteredElement="_J3kHFP_tEeC36v2Jr-YNEw">
+                  <ownedParameteredElement xmi:type="uml:Class" xmi:id="_J3kHFP_tEeC36v2Jr-YNEw" name="T" templateParameter="_J3kHE__tEeC36v2Jr-YNEw"/>
+                </ownedParameter>
+              </ownedTemplateSignature>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J4AL8P_tEeC36v2Jr-YNEw" name="removeNonMatchingAndDefaultAlternatives" specification="_J3_k4P_tEeC36v2Jr-YNEw">
+                <language>JAVA</language>
+                <body>&#xD;
+		if (exactMatches.size() &amp;gt; 0) {&#xD;
+			candidates.removeAll(defaultMatches);&#xD;
+		}&#xD;
+		removeNonMatching();&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J4CBIP_tEeC36v2Jr-YNEw" name="removeNonMatching" specification="_J4BaEP_tEeC36v2Jr-YNEw">
+                <language>JAVA</language>
+                <body>&#xD;
+		candidates.removeAll(noMatches);&#xD;
+	</body>
+              </ownedBehavior>
+              <ownedOperation xmi:id="_J3_k4P_tEeC36v2Jr-YNEw" name="removeNonMatchingAndDefaultAlternatives" visibility="public" method="_J4AL8P_tEeC36v2Jr-YNEw">
+                <eAnnotations xmi:id="_J3_k4f_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                  <details xmi:id="_J3_k4v_tEeC36v2Jr-YNEw" key="documentation" value=" Remove all capabilities that come from a different non default&#xD;&#xA; compartment, and remove capabilities from the default compartment if we&#xD;&#xA; have a match from our own compartment.&#xD;&#xA;&#x9;"/>
+                </eAnnotations>
+              </ownedOperation>
+              <ownedOperation xmi:id="_J4BaEP_tEeC36v2Jr-YNEw" name="removeNonMatching" visibility="public" method="_J4CBIP_tEeC36v2Jr-YNEw">
+                <eAnnotations xmi:id="_J4BaEf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                  <details xmi:id="_J4BaEv_tEeC36v2Jr-YNEw" key="documentation" value=" Remove all non matching capabilities.&#xD;&#xA;&#x9;"/>
+                </eAnnotations>
+              </ownedOperation>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J3kHFf_tEeC36v2Jr-YNEw" name="bundlehook" clientDependency="_KFDwhv_tEeC36v2Jr-YNEw _KFEXkP_tEeC36v2Jr-YNEw _KFEXkf_tEeC36v2Jr-YNEw _KFEXkv_tEeC36v2Jr-YNEw">
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3kHFv_tEeC36v2Jr-YNEw" name="BundleJailFindHook">
+                <elementImport xmi:id="_J4EdY__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4EdZP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHEf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4FEcP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4FEcv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4FEc__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4EdYv_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J4QDkP_tEeC36v2Jr-YNEw" name="find" specification="_J4OOYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J4QDkf_tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J4QDkv_tEeC36v2Jr-YNEw" name="bundles" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		BundleJailCellFilter&lt;Bundle&amp;gt; filter = new BundleJailCellFilter&lt;Bundle&amp;gt;(&#xD;
+				context.getBundle(), bundles) {&#xD;
+&#xD;
+			@Override&#xD;
+			protected Bundle adaptToBundle(Bundle t) {&#xD;
+				return t;&#xD;
+			}&#xD;
+		};&#xD;
+		filter.removeNonMatchingAndDefaultAlternatives();&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J4OOYP_tEeC36v2Jr-YNEw" name="find" visibility="public" method="_J4QDkP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J4OOYf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J4OOYv_tEeC36v2Jr-YNEw" key="documentation" value=" Find hook method. This method is called for the following:&#xD;&#xA; &lt;ul>&#xD;&#xA; &lt;li>Bundle find operations using {@link BundleContext#getBundle(long)}&#xD;&#xA; and {@link BundleContext#getBundles()} methods. The find method can&#xD;&#xA; filter the result of the find operation. Note that a find operation using&#xD;&#xA; the {@link BundleContext#getBundle(String)} method does not cause the&#xD;&#xA; find method to be called.&lt;/li>&#xD;&#xA; &lt;li>Bundle install operations when an existing bundle is already&#xD;&#xA; installed at a given location. In this case, the find method is called to&#xD;&#xA; determine if the context performing the install operation is able to find&#xD;&#xA; the bundle. If the context cannot find the existing bundle then the&#xD;&#xA; install operation must fail with a&#xD;&#xA; {@link BundleException#REJECTED_BY_HOOK} exception.&lt;/li>&#xD;&#xA; &lt;/ul>&#xD;&#xA; &#xD;&#xA; @param context&#xD;&#xA;            The bundle context of the bundle performing the find&#xD;&#xA;            operation.&#xD;&#xA; @param bundles&#xD;&#xA;            A collection of Bundles to be returned as a result of the find&#xD;&#xA;            operation. The implementation of this method may remove&#xD;&#xA;            bundles from the collection to prevent the bundles from being&#xD;&#xA;            returned to the bundle performing the find operation. The&#xD;&#xA;            collection supports all the optional {@code Collection}&#xD;&#xA;            operations except {@code add} and {@code addAll}. Attempting&#xD;&#xA;            to add to the collection will result in an&#xD;&#xA;            {@code UnsupportedOperationException}. The collection is not&#xD;&#xA;            synchronized.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J4OOY__tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J4OOZP_tEeC36v2Jr-YNEw" name="bundles" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3kuIP_tEeC36v2Jr-YNEw" name="BundleJailEventHook">
+                <elementImport xmi:id="_J4UVAf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4UVAv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHEf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4UVA__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4UVBP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4UVBv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4UVBf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4U8EP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4UVAP_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J4kzsP_tEeC36v2Jr-YNEw" name="event" specification="_J4hwYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J4kzsf_tEeC36v2Jr-YNEw" name="event" type="_J4UVBf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J4kzsv_tEeC36v2Jr-YNEw" name="contexts" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		BundleJailCellFilter&lt;BundleContext&amp;gt; filter = new BundleJailCellFilter&lt;BundleContext&amp;gt;(&#xD;
+				event.getBundle(), contexts) {&#xD;
+			@Override&#xD;
+			protected Bundle adaptToBundle(BundleContext t) {&#xD;
+				return t.getBundle();&#xD;
+			}&#xD;
+		};&#xD;
+		filter.removeNonMatching();&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J4hwYP_tEeC36v2Jr-YNEw" name="event" visibility="public" method="_J4kzsP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J4hwYf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J4hwYv_tEeC36v2Jr-YNEw" key="documentation" value=" Bundle event hook method.  This method is called prior to bundle event&#xD;&#xA; delivery when a bundle is installed, resolved, started, stopped, unresolved, or&#xD;&#xA; uninstalled.  This method can filter the bundles which receive the event.&#xD;&#xA; &lt;p>&#xD;&#xA; This method must be called by the framework one and only one time for each bundle &#xD;&#xA; event generated, this included bundle events which are generated when there are no &#xD;&#xA; bundle listeners registered.  This method must be called on the same thread that is &#xD;&#xA; performing the action which generated the specified event.  The specified &#xD;&#xA; collection includes bundle contexts with synchronous and asynchronous bundle &#xD;&#xA; listeners registered with them.&#xD;&#xA; &#xD;&#xA; @param event The bundle event to be delivered&#xD;&#xA; @param contexts A collection of Bundle Contexts for bundles which have&#xD;&#xA;        listeners to which the specified event will be delivered. The&#xD;&#xA;        implementation of this method may remove bundle contexts from the&#xD;&#xA;        collection to prevent the event from being delivered to the&#xD;&#xA;        associated bundles. The collection supports all the optional&#xD;&#xA;        {@code Collection} operations except {@code add} and&#xD;&#xA;        {@code addAll}. Attempting to add to the collection will&#xD;&#xA;        result in an {@code UnsupportedOperationException}. The&#xD;&#xA;        collection is not synchronized.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J4hwY__tEeC36v2Jr-YNEw" name="event" type="_J4UVBf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J4hwZP_tEeC36v2Jr-YNEw" name="contexts" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFDwhv_tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3kHFf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXkP_tEeC36v2Jr-YNEw" supplier="_J3jgBv_tEeC36v2Jr-YNEw" client="_J3kHFf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXkf_tEeC36v2Jr-YNEw" supplier="_J39vuf_tEeC36v2Jr-YNEw" client="_J3kHFf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXkv_tEeC36v2Jr-YNEw" supplier="_J4EdYf_tEeC36v2Jr-YNEw" client="_J3kHFf_tEeC36v2Jr-YNEw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J3kuIf_tEeC36v2Jr-YNEw" name="init" clientDependency="_KFEXk__tEeC36v2Jr-YNEw _KFEXlP_tEeC36v2Jr-YNEw _KFEXlf_tEeC36v2Jr-YNEw _KFEXlv_tEeC36v2Jr-YNEw _KFEXl__tEeC36v2Jr-YNEw _KFEXmP_tEeC36v2Jr-YNEw _KFEXmf_tEeC36v2Jr-YNEw _KFEXmv_tEeC36v2Jr-YNEw _KFEXm__tEeC36v2Jr-YNEw _KFEXnP_tEeC36v2Jr-YNEw _KFEXnf_tEeC36v2Jr-YNEw _KFEXnv_tEeC36v2Jr-YNEw _KFE-oP_tEeC36v2Jr-YNEw">
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3kuIv_tEeC36v2Jr-YNEw" name="BundleJailAdapterHook">
+                <elementImport xmi:id="_J4yPEf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4yPE__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4yPFf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPFP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2If_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4y2IP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2Iv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kuIP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2I__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHFv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2JP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3lVMf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2Jf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3lVNP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2Jv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3lVM__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4y2J__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3l8Qf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4zdMf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4zdMP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J4zdMv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4xoA__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J40EQf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J40EQP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J40EQv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J40ERP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J40EQ__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J40rUf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J40rUP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J40rVP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J40rU__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J41SYv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J41SYf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J41SZP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J41SY__tEeC36v2Jr-YNEw"/>
+                <ownedAttribute xmi:id="_J491QP_tEeC36v2Jr-YNEw" name="PROTOCOL" visibility="public" isStatic="true" type="_J32a8f_tEeC36v2Jr-YNEw">
+                  <defaultValue xmi:type="uml:LiteralString" xmi:id="_J491Qf_tEeC36v2Jr-YNEw" name="" type="_J32a8f_tEeC36v2Jr-YNEw" value="&quot;filedistinction&quot;"/>
+                </ownedAttribute>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J5gAwP_tEeC36v2Jr-YNEw" name="initialize" specification="_J5Z6IP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J5gAwf_tEeC36v2Jr-YNEw" name="adaptor" type="_J4zdMP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// nothing to initialize here&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J530MP_tEeC36v2Jr-YNEw" name="frameworkStart" specification="_J5ziwP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J530Mf_tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		resolverHookFactoryServiceRegistration = context.registerService(&#xD;
+				ResolverHookFactory.class, new BundleJailResolverHookFactory(), null);&#xD;
+		bundleFindHookServiceRegistration = context.registerService(&#xD;
+				BundleJailFindHook.class,&#xD;
+				new BundleJailFindHook(), null);&#xD;
+		bundleEventHookServiceRegistration = context.registerService(&#xD;
+				BundleJailEventHook.class,&#xD;
+				new BundleJailEventHook(), null);&#xD;
+		serviceFindHookServiceRegistration = context.registerService(&#xD;
+				BundleJailServiceFindHook.class,&#xD;
+				new BundleJailServiceFindHook(), null);&#xD;
+		serviceEventListenerHookServiceRegistration = context.registerService(&#xD;
+				BundleJailServiceEventListenerHook.class,&#xD;
+				new BundleJailServiceEventListenerHook(), null);&#xD;
+		registerURLStreamHandlerService(context);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J6TSAP_tEeC36v2Jr-YNEw" name="frameworkStop" specification="_J6NLYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J6TSAf_tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// nothing to do here&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J6v98P_tEeC36v2Jr-YNEw" name="frameworkStopping" specification="_J6rFcP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J6v98f_tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		urlStreamHandlerServiceRegistration.unregister();&#xD;
+		serviceEventListenerHookServiceRegistration.unregister();&#xD;
+		serviceFindHookServiceRegistration.unregister();&#xD;
+		bundleEventHookServiceRegistration.unregister();&#xD;
+		bundleFindHookServiceRegistration.unregister();&#xD;
+		resolverHookFactoryServiceRegistration.unregister();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J7F8MP_tEeC36v2Jr-YNEw" name="addProperties" specification="_J7CR0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J7F8Mf_tEeC36v2Jr-YNEw" name="properties" type="_J4y2IP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// we do not add properties&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J7x4sP_tEeC36v2Jr-YNEw" name="mapLocationToURLConnection" specification="_J7tAMP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J7x4sf_tEeC36v2Jr-YNEw" name="location" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J7x4sv_tEeC36v2Jr-YNEw" type="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// we do not take part in this game&#xD;
+		return null;&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J8K6QP_tEeC36v2Jr-YNEw" name="handleRuntimeError" specification="_J8FasP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J8K6Qf_tEeC36v2Jr-YNEw" name="error" type="_J73YQP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// we do not handle runtime errors&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J8YVoP_tEeC36v2Jr-YNEw" name="createFrameworkLog" specification="_J8UrQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J8YVof_tEeC36v2Jr-YNEw" type="_J40EQP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// the framework log getts created by another adapter hook&#xD;
+		return null;&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J5Z6IP_tEeC36v2Jr-YNEw" name="initialize" visibility="public" method="_J5gAwP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J5Z6If_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J5Z6Iv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#initialize(EventPublisher)}.&#xD;&#xA; This method allows an adaptor hook to save the adaptor object for later.&#xD;&#xA; @param adaptor the adaptor object associated with this AdaptorHook.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J5Z6I__tEeC36v2Jr-YNEw" name="adaptor" type="_J4zdMP_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J5ziwP_tEeC36v2Jr-YNEw" name="frameworkStart" visibility="public" method="_J530MP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J5ziwf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J5ziwv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#frameworkStart(BundleContext)}.&#xD;&#xA; This method allows an adaptor hook to execute code when the framework is starting &#xD;&#xA; (e.g. to register services).&#xD;&#xA; @param context the system bundle context&#xD;&#xA; @throws BundleException if an error occurs&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J5ziw__tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J6NLYP_tEeC36v2Jr-YNEw" name="frameworkStop" visibility="public" method="_J6TSAP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J6NLYf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J6NLYv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#frameworkStop(BundleContext)}.&#xD;&#xA; This method allows an adaptor hook to execute code when the framework is stopped&#xD;&#xA; (e.g. to unregister services).&#xD;&#xA; @param context the system bundle context&#xD;&#xA; @throws BundleException if an error occurs.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J6NLY__tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J6rFcP_tEeC36v2Jr-YNEw" name="frameworkStopping" visibility="public" method="_J6v98P_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J6rFcf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J6rFcv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#frameworkStopping(BundleContext)}.&#xD;&#xA; This method allows an adaptor hook to execute code when the framework is about to start &#xD;&#xA; the shutdown process.&#xD;&#xA; @param context the system bundle context&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J6rFc__tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J7CR0P_tEeC36v2Jr-YNEw" name="addProperties" visibility="public" method="_J7F8MP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J7CR0f_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J7CR0v_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#getProperties()}.&#xD;&#xA; This method allows an adaptor hook to add property values to the adaptor &#xD;&#xA; properties object.&#xD;&#xA; @param properties the adaptor properties object.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J7CR0__tEeC36v2Jr-YNEw" name="properties" type="_J4y2IP_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J7tAMP_tEeC36v2Jr-YNEw" name="mapLocationToURLConnection" visibility="public" method="_J7x4sP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J7tAMf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J7tAMv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#mapLocationToURLConnection(String)}.&#xD;&#xA; The adaptor will call this method for each configured adaptor hook until one &#xD;&#xA; adaptor hook returns a non-null value.  If no adaptor hook returns a non-null value &#xD;&#xA; then the adaptor will perform the default behavior.&#xD;&#xA; @param location a bundle location string to be converted to a URLConnection&#xD;&#xA; @return the URLConnection converted from the bundle location or null.&#xD;&#xA; @throws IOException if an error occured creating the URLConnection&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J7tAM__tEeC36v2Jr-YNEw" name="location" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J7tANP_tEeC36v2Jr-YNEw" type="_J4yPEv_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J8FasP_tEeC36v2Jr-YNEw" name="handleRuntimeError" visibility="public" method="_J8K6QP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J8Fasf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J8Fasv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#handleRuntimeError(Throwable)}.&#xD;&#xA; The adaptor will call this method for each configured adaptor hook.&#xD;&#xA; @param error the unexpected error that occured.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J8Fas__tEeC36v2Jr-YNEw" name="error" type="_J73YQP_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J8UrQP_tEeC36v2Jr-YNEw" name="createFrameworkLog" visibility="public" method="_J8YVoP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J8UrQf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J8UrQv_tEeC36v2Jr-YNEw" key="documentation" value=" Gets called by the adaptor during {@link FrameworkAdaptor#getFrameworkLog()}.&#xD;&#xA; The adaptor will call this method for each configured adaptor hook until one &#xD;&#xA; adaptor hook returns a non-null value.  If no adaptor hook returns a non-null value &#xD;&#xA; then the adaptor will return null.&#xD;&#xA; @return a FrameworkLog object or null.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J8UrQ__tEeC36v2Jr-YNEw" type="_J40EQP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3kuI__tEeC36v2Jr-YNEw" name="BundleJailHookConfigurator">
+                <elementImport xmi:id="_J8aK0f_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8aK0P_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8aK0__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8aK0v_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J8ecQP_tEeC36v2Jr-YNEw" name="addHooks" specification="_J8dOIP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J8ecQf_tEeC36v2Jr-YNEw" name="hookRegistry" type="_J8aK0v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		hookRegistry.addAdaptorHook(new BundleJailAdapterHook());&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J8dOIP_tEeC36v2Jr-YNEw" name="addHooks" visibility="public" method="_J8ecQP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J8dOIf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J8dOIv_tEeC36v2Jr-YNEw" key="documentation" value=" Adds hooks to the specified hook registry.&#xD;&#xA; @param hookRegistry the hook registry used to add hooks&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J8dOI__tEeC36v2Jr-YNEw" name="hookRegistry" type="_J8aK0v_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXk__tEeC36v2Jr-YNEw" supplier="_J4xoBP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXlP_tEeC36v2Jr-YNEw" supplier="_J3nxcf_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXlf_tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXlv_tEeC36v2Jr-YNEw" supplier="_J3kHFf_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXl__tEeC36v2Jr-YNEw" supplier="_J3kuJP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXmP_tEeC36v2Jr-YNEw" supplier="_J3lVMv_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXmf_tEeC36v2Jr-YNEw" supplier="_J3l8QP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXmv_tEeC36v2Jr-YNEw" supplier="_J4xoAf_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXm__tEeC36v2Jr-YNEw" supplier="_J4xoAv_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXnP_tEeC36v2Jr-YNEw" supplier="_J4zdNP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXnf_tEeC36v2Jr-YNEw" supplier="_J39vuf_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFEXnv_tEeC36v2Jr-YNEw" supplier="_J40rUv_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-oP_tEeC36v2Jr-YNEw" supplier="_J41SYP_tEeC36v2Jr-YNEw" client="_J3kuIf_tEeC36v2Jr-YNEw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J3kuJP_tEeC36v2Jr-YNEw" name="resolverhook" clientDependency="_KFE-of_tEeC36v2Jr-YNEw _KFE-ov_tEeC36v2Jr-YNEw _KFE-o__tEeC36v2Jr-YNEw _KFE-pP_tEeC36v2Jr-YNEw _KFE-pf_tEeC36v2Jr-YNEw">
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3lVMP_tEeC36v2Jr-YNEw" name="BundleJailResolverHook">
+                <elementImport xmi:id="_J8g4gf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8g4gv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHEf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8g4g__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8g4hP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8g4gP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8hfkf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8hfkP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8hfk__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8hfkv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J8hflf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8hflP_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J8qpgP_tEeC36v2Jr-YNEw" name="filterResolvable" specification="_J8o0UP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J8rQkP_tEeC36v2Jr-YNEw" name="candidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// nothing to do here for bundle jails&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J84E4P_tEeC36v2Jr-YNEw" name="filterSingletonCollisions" specification="_J82PsP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J84E4f_tEeC36v2Jr-YNEw" name="singleton" type="_J8hfkP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J84E4v_tEeC36v2Jr-YNEw" name="collisionCandidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		System.err.println(&quot;CECResolverHook.filterSingletonCollisions&quot;);&#xD;
+		BundleJailCellFilter&lt;BundleCapability&amp;gt; filter = new BundleCapabilityBundleJailCellFilter(&#xD;
+				singleton.getRevision().getBundle(), collisionCandidates);&#xD;
+		filter.removeNonMatching();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J9B14P_tEeC36v2Jr-YNEw" name="filterMatches" specification="_J9AAsP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J9B14f_tEeC36v2Jr-YNEw" name="requirement" type="_J8hfkv_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9B14v_tEeC36v2Jr-YNEw" name="candidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		BundleJailCellFilter&lt;BundleCapability&amp;gt; filter = new BundleCapabilityBundleJailCellFilter(&#xD;
+				requirement.getRevision().getBundle(), candidates);&#xD;
+		filter.removeNonMatchingAndDefaultAlternatives();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J9HVcP_tEeC36v2Jr-YNEw" name="end" specification="_J9FgQP_tEeC36v2Jr-YNEw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+		// TODO Auto-generated method stub&#xD;
+		System.err.println(&quot;CECResolverHook.end&quot;);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J8o0UP_tEeC36v2Jr-YNEw" name="filterResolvable" visibility="public" method="_J8qpgP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J8o0Uf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J8o0Uv_tEeC36v2Jr-YNEw" key="documentation" value=" Filter resolvable candidates hook method.  This method may be called&#xD;&#xA; multiple times during a single resolve process.&#xD;&#xA; This method can filter the collection of candidates by removing &#xD;&#xA; potential candidates.  Removing a candidate will prevent the candidate&#xD;&#xA; from resolving during the current resolve process. &#xD;&#xA; &#xD;&#xA; @param candidates the collection of resolvable candidates available during&#xD;&#xA; a resolve process. &#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J8o0U__tEeC36v2Jr-YNEw" name="candidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J82PsP_tEeC36v2Jr-YNEw" name="filterSingletonCollisions" visibility="public" method="_J84E4P_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J82Psf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J82Psv_tEeC36v2Jr-YNEw" key="documentation" value=" Filter singleton collisions hook method. This method is called during the&#xD;&#xA; resolve process for the specified singleton. The specified singleton&#xD;&#xA; represents a singleton capability and the specified collection represent&#xD;&#xA; a collection of singleton capabilities which are considered collision&#xD;&#xA; candidates. The singleton capability and the collection of collision&#xD;&#xA; candidates must all use the same name space.&#xD;&#xA; &lt;p>&#xD;&#xA; Currently only capabilities with the name space of&#xD;&#xA; {@link BundleRevision#BUNDLE_NAMESPACE osgi.wiring.bundle} can be&#xD;&#xA; singletons. In that case all the collision candidates have the name space&#xD;&#xA; of {@link BundleRevision#BUNDLE_NAMESPACE osgi.wiring.bundle}, are&#xD;&#xA; singletons, and have the same symbolic name as the specified singleton&#xD;&#xA; capability.&#xD;&#xA; &lt;p>&#xD;&#xA; In the future, capabilities in other name spaces may support the&#xD;&#xA; singleton concept. Hook implementations should be prepared to receive&#xD;&#xA; calls to this method for capabilities in name spaces other than&#xD;&#xA; {@link BundleRevision#BUNDLE_NAMESPACE osgi.wiring.bundle}.&#xD;&#xA; &lt;p>&#xD;&#xA; This method can filter the list of collision candidates by removing&#xD;&#xA; potential collisions. Removing a collision candidate will allow the&#xD;&#xA; specified singleton to resolve regardless of the resolution state of the&#xD;&#xA; removed collision candidate.&#xD;&#xA; &#xD;&#xA; @param singleton the singleton involved in a resolve process&#xD;&#xA; @param collisionCandidates a collection of singleton collision candidates&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J82Ps__tEeC36v2Jr-YNEw" name="singleton" type="_J8hfkP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J82PtP_tEeC36v2Jr-YNEw" name="collisionCandidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J9AAsP_tEeC36v2Jr-YNEw" name="filterMatches" visibility="public" method="_J9B14P_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J9AAsf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J9AAsv_tEeC36v2Jr-YNEw" key="documentation" value=" Filter matches hook method. This method is called during the resolve process for the &#xD;&#xA; specified requirement.  The collection of candidates match the specified requirement.&#xD;&#xA; This method can filter the collection of matching candidates by removing candidates from &#xD;&#xA; the collection.  Removing a candidate will prevent the resolve process from choosing the &#xD;&#xA; removed candidate to satisfy the requirement.&#xD;&#xA; &lt;p>&#xD;&#xA; All of the candidates will have the same name space and will &#xD;&#xA; match the specified requirement.&#xD;&#xA; &lt;p>&#xD;&#xA; If the Java Runtime Environment supports permissions then the collection of &#xD;&#xA; candidates will only contain candidates for which the requirer has permission to&#xD;&#xA; access.&#xD;&#xA; @param requirement the requirement to filter candidates for&#xD;&#xA; @param candidates a collection of candidates that match the requirement&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J9AAs__tEeC36v2Jr-YNEw" name="requirement" type="_J8hfkv_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9AAtP_tEeC36v2Jr-YNEw" name="candidates" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J9FgQP_tEeC36v2Jr-YNEw" name="end" visibility="public" method="_J9HVcP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J9FgQf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J9FgQv_tEeC36v2Jr-YNEw" key="documentation" value=" This method is called once at the end of the resolve process.&#xD;&#xA; After the end method is called the resolve process has ended.&#xD;&#xA; The framework must not hold onto this resolver hook instance&#xD;&#xA; after end has been called.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3lVMf_tEeC36v2Jr-YNEw" name="BundleJailResolverHookFactory">
+                <elementImport xmi:id="_J9KYwP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9KYwf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8g4gP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9KYwv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J40rU__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9KYw__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J8hflP_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J9QfYP_tEeC36v2Jr-YNEw" name="begin" specification="_J9OqMP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J9QfYf_tEeC36v2Jr-YNEw" name="triggers" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9QfYv_tEeC36v2Jr-YNEw" type="_J8g4gP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return new BundleJailResolverHook();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J9OqMP_tEeC36v2Jr-YNEw" name="begin" visibility="public" method="_J9QfYP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J9OqMf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J9OqMv_tEeC36v2Jr-YNEw" key="documentation" value=" This method is called by the framework each time a resolve process begins&#xD;&#xA; to obtain a {@link ResolverHook resolver hook} instance.  This resolver hook &#xD;&#xA; instance will be used for the duration of the resolve process.  At the end of &#xD;&#xA; the resolve process the method {@link ResolverHook#end()} must be called by &#xD;&#xA; the framework and the framework must not hold any references of the resolver &#xD;&#xA; hook instance.&#xD;&#xA; &lt;p>&#xD;&#xA; The triggers represent the collection of bundles which triggered&#xD;&#xA; the resolve process.  This collection may be empty if the triggers&#xD;&#xA; cannot be determined by the framework.  In most cases the triggers &#xD;&#xA; can easily be determined.  Calling certain methods on &#xD;&#xA; {@link Bundle bundle} when a bundle is in the {@link Bundle#INSTALLED INSTALLED} &#xD;&#xA; state will cause the framework to begin a resolve process in order to resolve the &#xD;&#xA; bundle.  The following methods will start a resolve process in this case:&#xD;&#xA; &lt;ul>&#xD;&#xA;   &lt;li>{@link Bundle#start() start}&lt;/li>&#xD;&#xA;   &lt;li>{@link Bundle#loadClass(String) loadClass}&lt;/li>&#xD;&#xA;   &lt;li>{@link Bundle#findEntries(String, String, boolean) findEntries}&lt;/li>&#xD;&#xA;   &lt;li>{@link Bundle#getResource(String) getResource}&lt;/li>&#xD;&#xA;   &lt;li>{@link Bundle#getResources(String) getResources}&lt;/li>&#xD;&#xA; &lt;/ul> &#xD;&#xA; In such cases the collection will contain the single bundle which the&#xD;&#xA; framework is trying to resolve.  Other cases will cause multiple bundles to be&#xD;&#xA; included in the trigger bundles collection.  When {@link FrameworkWiring#resolveBundles(Collection)&#xD;&#xA; resolveBundles} is called the collection of triggers must include all the current bundle &#xD;&#xA; revisions for bundles passed to resolveBundles which are in the {@link Bundle#INSTALLED INSTALLED}&#xD;&#xA; state.&#xD;&#xA; &lt;p>&#xD;&#xA; When {@link FrameworkWiring#refreshBundles(Collection, org.osgi.framework.FrameworkListener...)}&#xD;&#xA; is called the collection of triggers is determined with the following steps:&#xD;&#xA; &lt;ul>&#xD;&#xA;   &lt;li>If the collection of bundles passed is null then {@link FrameworkWiring#getRemovalPendingBundles()}&#xD;&#xA;   is called to get the initial collection of bundles.&lt;/li>&#xD;&#xA;   &lt;li>The equivalent of calling {@link FrameworkWiring#getDependencyClosure(Collection)} is called with&#xD;&#xA;   the initial collection of bundles to get the dependency closure collection of the bundles being refreshed.&lt;/li>&#xD;&#xA;   &lt;li>Remove any non-active bundles from the dependency closure collection.&lt;/li>&#xD;&#xA;   &lt;li>For each bundle remaining in the dependency closure collection get the current bundle revision&#xD;&#xA;   and add it to the collection of triggers.&lt;/li> &#xD;&#xA; &lt;/ul>&#xD;&#xA; &lt;p>&#xD;&#xA; As described above, a resolve process is typically initiated as a result of calling API that causes the &#xD;&#xA; framework to attempt to resolve one or more bundles.  &#xD;&#xA; The framework is free to start a resolve process at any time for reasons other than calls to framework API.&#xD;&#xA; For example, a resolve process may be used by the framework for diagnostic purposes and result in no&#xD;&#xA; bundles actually becoming resolved at the end of the process.&#xD;&#xA; Resolver hook implementations must be prepared for resolve processes that are initiated for other reasons&#xD;&#xA; besides calls to framework API.&#xD;&#xA; @param triggers an unmodifiable collection of bundles which triggered the resolve process.&#xD;&#xA; This collection may be empty if the collection of trigger bundles cannot be&#xD;&#xA; determined.&#xD;&#xA; @return a resolver hook instance to be used for the duration of the resolve process.&#xD;&#xA; A {@code null} value may be returned which indicates this resolver hook factory abstains from&#xD;&#xA; the resolve process.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J9OqM__tEeC36v2Jr-YNEw" name="triggers" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9OqNP_tEeC36v2Jr-YNEw" type="_J8g4gP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-of_tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3kuJP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-ov_tEeC36v2Jr-YNEw" supplier="_J3jgBv_tEeC36v2Jr-YNEw" client="_J3kuJP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-o__tEeC36v2Jr-YNEw" supplier="_J39vuf_tEeC36v2Jr-YNEw" client="_J3kuJP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-pP_tEeC36v2Jr-YNEw" supplier="_J40rUv_tEeC36v2Jr-YNEw" client="_J3kuJP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-pf_tEeC36v2Jr-YNEw" supplier="_J8g4hf_tEeC36v2Jr-YNEw" client="_J3kuJP_tEeC36v2Jr-YNEw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J3lVMv_tEeC36v2Jr-YNEw" name="servicehook" clientDependency="_KFE-pv_tEeC36v2Jr-YNEw _KFE-p__tEeC36v2Jr-YNEw _KFE-qP_tEeC36v2Jr-YNEw _KFE-qf_tEeC36v2Jr-YNEw _KFE-qv_tEeC36v2Jr-YNEw">
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3lVM__tEeC36v2Jr-YNEw" name="BundleJailServiceFindHook">
+                <elementImport xmi:id="_J9UJwP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9UJwf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHEf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9UJwv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9UJw__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9UJxf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9UJxP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9Uw0P_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9Tisf_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J9l2kP_tEeC36v2Jr-YNEw" name="find" specification="_J9kBYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J9l2kf_tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9l2kv_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9mdoP_tEeC36v2Jr-YNEw" name="filter" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9mdof_tEeC36v2Jr-YNEw" name="allServices" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9mdov_tEeC36v2Jr-YNEw" name="references" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		BundleJailCellFilter&lt;ServiceReference&lt;?&amp;gt;&amp;gt; compartmentFilter = new BundleJailCellFilter&lt;ServiceReference&lt;?&amp;gt;&amp;gt;(&#xD;
+				context.getBundle(), references) {&#xD;
+&#xD;
+			@Override&#xD;
+			protected Bundle adaptToBundle(ServiceReference&lt;?&amp;gt; t) {&#xD;
+				return t.getBundle();&#xD;
+			}&#xD;
+		};&#xD;
+		compartmentFilter.removeNonMatchingAndDefaultAlternatives();&#xD;
+&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J9kBYP_tEeC36v2Jr-YNEw" name="find" visibility="public" method="_J9l2kP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J9kBYf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J9kBYv_tEeC36v2Jr-YNEw" key="documentation" value=" Find hook method. This method is called during the service find operation&#xD;&#xA; (for example, {@link BundleContext#getServiceReferences(String, String)}&#xD;&#xA; ). This method can filter the result of the find operation.&#xD;&#xA; &#xD;&#xA; @param context The bundle context of the bundle performing the find&#xD;&#xA;        operation.&#xD;&#xA; @param name The class name of the services to find or {@code null}&#xD;&#xA;        to find all services.&#xD;&#xA; @param filter The filter criteria of the services to find or&#xD;&#xA;        {@code null} for no filter criteria.&#xD;&#xA; @param allServices {@code true} if the find operation is the result&#xD;&#xA;        of a call to&#xD;&#xA;        {@link BundleContext#getAllServiceReferences(String, String)}&#xD;&#xA; @param references A collection of Service References to be returned as a&#xD;&#xA;        result of the find operation. The implementation of this method&#xD;&#xA;        may remove service references from the collection to prevent the&#xD;&#xA;        references from being returned to the bundle performing the find&#xD;&#xA;        operation. The collection supports all the optional&#xD;&#xA;        {@code Collection} operations except {@code add} and&#xD;&#xA;        {@code addAll}. Attempting to add to the collection will&#xD;&#xA;        result in an {@code UnsupportedOperationException}. The&#xD;&#xA;        collection is not synchronized.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J9kBY__tEeC36v2Jr-YNEw" name="context" type="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9kBZP_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9kBZf_tEeC36v2Jr-YNEw" name="filter" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9kBZv_tEeC36v2Jr-YNEw" name="allServices" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J9kBZ__tEeC36v2Jr-YNEw" name="references" type="_J39vsf_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3lVNP_tEeC36v2Jr-YNEw" name="BundleJailServiceEventListenerHook">
+                <elementImport xmi:id="_J9qvEf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J39vsf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9qvE__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9qvFP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3kHEf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9qvFf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3-WwP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9qvFv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4FEcf_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9rWIf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9rWIP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9rWIv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9qvEP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9rWJf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9rWJP_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J95YkP_tEeC36v2Jr-YNEw" name="event" specification="_J928UP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J95Ykf_tEeC36v2Jr-YNEw" name="event" type="_J9rWIP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J95Ykv_tEeC36v2Jr-YNEw" name="listeners" type="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		BundleJailCellFilter&lt;BundleContext&amp;gt; compartmentFilter = new BundleJailCellFilter&lt;BundleContext&amp;gt;(&#xD;
+				event.getServiceReference().getBundle(), listeners.keySet()) {&#xD;
+			@Override&#xD;
+			protected Bundle adaptToBundle(BundleContext t) {&#xD;
+				return t.getBundle();&#xD;
+			}&#xD;
+		};&#xD;
+		compartmentFilter.removeNonMatchingAndDefaultAlternatives();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J928UP_tEeC36v2Jr-YNEw" name="event" visibility="public" method="_J95YkP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J928Uf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J928Uv_tEeC36v2Jr-YNEw" key="documentation" value=" Event listener hook method. This method is called prior to service event&#xD;&#xA; delivery when a publishing bundle registers, modifies or unregisters a&#xD;&#xA; service. This method can filter the listeners which receive the event.&#xD;&#xA; &#xD;&#xA; @param event The service event to be delivered.&#xD;&#xA; @param listeners A map of Bundle Contexts to a collection of Listener&#xD;&#xA;        Infos for the bundle's listeners to which the specified event will&#xD;&#xA;        be delivered. The implementation of this method may remove bundle&#xD;&#xA;        contexts from the map and listener infos from the collection&#xD;&#xA;        values to prevent the event from being delivered to the associated&#xD;&#xA;        listeners. The map supports all the optional {@code Map}&#xD;&#xA;        operations except {@code put} and {@code putAll}. Attempting to&#xD;&#xA;        add to the map will result in an&#xD;&#xA;        {@code UnsupportedOperationException}. The collection values in&#xD;&#xA;        the map supports all the optional {@code Collection} operations&#xD;&#xA;        except {@code add} and {@code addAll}. Attempting to add to a&#xD;&#xA;        collection will result in an {@code UnsupportedOperationException}&#xD;&#xA;        . The map and the collections are not synchronized.&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J928U__tEeC36v2Jr-YNEw" name="event" type="_J9rWIP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J928VP_tEeC36v2Jr-YNEw" name="listeners" type="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-pv_tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3lVMv_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-p__tEeC36v2Jr-YNEw" supplier="_J3jgBv_tEeC36v2Jr-YNEw" client="_J3lVMv_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-qP_tEeC36v2Jr-YNEw" supplier="_J39vuf_tEeC36v2Jr-YNEw" client="_J3lVMv_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-qf_tEeC36v2Jr-YNEw" supplier="_J9TisP_tEeC36v2Jr-YNEw" client="_J3lVMv_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-qv_tEeC36v2Jr-YNEw" supplier="_J9rWI__tEeC36v2Jr-YNEw" client="_J3lVMv_tEeC36v2Jr-YNEw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J3l8QP_tEeC36v2Jr-YNEw" name="urlhandler" clientDependency="_KFE-q__tEeC36v2Jr-YNEw _KFE-rP_tEeC36v2Jr-YNEw _KFFlsP_tEeC36v2Jr-YNEw _KFFlsf_tEeC36v2Jr-YNEw _KFFlsv_tEeC36v2Jr-YNEw">
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3l8Qf_tEeC36v2Jr-YNEw" name="FileDistinctionURLStreamHandlerService">
+                <elementImport xmi:id="_J9_fMP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9_fMf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3nxdP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9_fMv_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9_fM__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9-4IP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J9_fNP_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J41SY__tEeC36v2Jr-YNEw"/>
+                <generalization xmi:id="_J9-4If_tEeC36v2Jr-YNEw" general="_J9-4IP_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J-J3QP_tEeC36v2Jr-YNEw" name="openConnection" specification="_J-HbAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-KeUP_tEeC36v2Jr-YNEw" name="u" type="_J3nxdP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J-KeUf_tEeC36v2Jr-YNEw" type="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return new FileDistinctionURLConnection(u);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J-HbAP_tEeC36v2Jr-YNEw" name="openConnection" visibility="public" method="_J-J3QP_tEeC36v2Jr-YNEw">
+                  <eAnnotations xmi:id="_J-HbAf_tEeC36v2Jr-YNEw" source="http://www.topcased.org/documentation">
+                    <details xmi:id="_J-HbAv_tEeC36v2Jr-YNEw" key="documentation" value=" @see &quot;java.net.URLStreamHandler.openConnection&quot;&#xD;&#xA;&#x9;"/>
+                  </eAnnotations>
+                  <ownedParameter xmi:id="_J-HbA__tEeC36v2Jr-YNEw" name="u" type="_J3nxdP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J-HbBP_tEeC36v2Jr-YNEw" type="_J4yPEv_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Class" xmi:id="_J3l8Qv_tEeC36v2Jr-YNEw" name="FileDistinctionURLConnection">
+                <elementImport xmi:id="_J-Ovwf_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-Ovw__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J-Ovwv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW0f_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J-PW0P_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW0v_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J3nxdP_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW0__tEeC36v2Jr-YNEw" visibility="private" importedElement="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW1v_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J-PW1f_tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW2P_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J-PW1__tEeC36v2Jr-YNEw"/>
+                <elementImport xmi:id="_J-PW2f_tEeC36v2Jr-YNEw" visibility="private" importedElement="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                <generalization xmi:id="_J-OvwP_tEeC36v2Jr-YNEw" general="_J4yPEv_tEeC36v2Jr-YNEw"/>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J-YgwP_tEeC36v2Jr-YNEw" name="connect" specification="_J-VdcP_tEeC36v2Jr-YNEw">
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.connect();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J-hDoP_tEeC36v2Jr-YNEw" name="getInputStream" specification="_J-eAUP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-hDof_tEeC36v2Jr-YNEw" type="_J-Ovwv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getInputStream();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J-yJYP_tEeC36v2Jr-YNEw" name="addRequestProperty" specification="_J-ufAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-yJYf_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J-yJYv_tEeC36v2Jr-YNEw" name="value" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.addRequestProperty(key, value);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_CoEP_tEeC36v2Jr-YNEw" name="equals" specification="_J-9IgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_CoEf_tEeC36v2Jr-YNEw" name="arg0" type="_J-1MsP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J_CoEv_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.equals(arg0);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_LK8P_tEeC36v2Jr-YNEw" name="getAllowUserInteraction" specification="_J_G5gP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_LK8f_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getAllowUserInteraction();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_RRkP_tEeC36v2Jr-YNEw" name="getConnectTimeout" specification="_J_OOQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_RRkf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getConnectTimeout();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_YmUP_tEeC36v2Jr-YNEw" name="getContent" specification="_J_WKEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_YmUf_tEeC36v2Jr-YNEw" type="_J-1MsP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getContent();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_kzkP_tEeC36v2Jr-YNEw" name="getContent" specification="_J_hwQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_kzkf_tEeC36v2Jr-YNEw" name="classes" type="_J_bCkP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J_kzkv_tEeC36v2Jr-YNEw" type="_J-1MsP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getContent(classes);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_tWcP_tEeC36v2Jr-YNEw" name="getContentEncoding" specification="_J_qTIP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_t9gP_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getContentEncoding();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J_2gYP_tEeC36v2Jr-YNEw" name="getContentLength" specification="_J_yO8P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_2gYf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getContentLength();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_J__qUP_tEeC36v2Jr-YNEw" name="getContentType" specification="_J_9OEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J__qUf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getContentType();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KAFw8P_tEeC36v2Jr-YNEw" name="getDate" specification="_KADUsP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAFw8f_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getDate();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KAahEP_tEeC36v2Jr-YNEw" name="getDefaultUseCaches" specification="_KAI0QP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAahEf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getDefaultUseCaches();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KAgAoP_tEeC36v2Jr-YNEw" name="getDoInput" specification="_KAdkYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAgAof_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getDoInput();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KAmHQP_tEeC36v2Jr-YNEw" name="getDoOutput" specification="_KAjD8P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAmHQf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getDoOutput();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KArm0P_tEeC36v2Jr-YNEw" name="getExpiration" specification="_KApKkP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KArm0f_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getExpiration();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KA0JsP_tEeC36v2Jr-YNEw" name="getHeaderField" specification="_KAxGYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KA0Jsf_tEeC36v2Jr-YNEw" name="n" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KA0Jsv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderField(n);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KBCMIP_tEeC36v2Jr-YNEw" name="getHeaderField" specification="_KA_I0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBCMIf_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBCMIv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderField(name);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KBPngP_tEeC36v2Jr-YNEw" name="getHeaderFieldDate" specification="_KBL9IP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBPngf_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBPngv_tEeC36v2Jr-YNEw" name="Default" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBPng__tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderFieldDate(name, Default);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KBeRAP_tEeC36v2Jr-YNEw" name="getHeaderFieldInt" specification="_KBZ_kP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBeRAf_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBeRAv_tEeC36v2Jr-YNEw" name="Default" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBeRA__tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderFieldInt(name, Default);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KBopEP_tEeC36v2Jr-YNEw" name="getHeaderFieldKey" specification="_KBk-sP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBopEf_tEeC36v2Jr-YNEw" name="n" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBopEv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderFieldKey(n);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KBxzAP_tEeC36v2Jr-YNEw" name="getHeaderFields" specification="_KBuIoP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBxzAf_tEeC36v2Jr-YNEw" type="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getHeaderFields();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KB5u0P_tEeC36v2Jr-YNEw" name="getIfModifiedSince" specification="_KB2EcP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KB5u0f_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getIfModifiedSince();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KCAcgP_tEeC36v2Jr-YNEw" name="getLastModified" specification="_KB9ZMP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCAcgf_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getLastModified();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KCKNgP_tEeC36v2Jr-YNEw" name="getOutputStream" specification="_KCGjIP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCKNgf_tEeC36v2Jr-YNEw" type="_J-PW0P_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getOutputStream();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KCSwYP_tEeC36v2Jr-YNEw" name="getPermission" specification="_KCPtEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCSwYf_tEeC36v2Jr-YNEw" type="_J-PW1f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getPermission();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KCbTQP_tEeC36v2Jr-YNEw" name="getReadTimeout" specification="_KCXB0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCbTQf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getReadTimeout();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KClrUP_tEeC36v2Jr-YNEw" name="getRequestProperties" specification="_KChZ4P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KClrUf_tEeC36v2Jr-YNEw" type="_J9qvEv_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getRequestProperties();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KC074P_tEeC36v2Jr-YNEw" name="getRequestProperty" specification="_KCx4kP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KC074f_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KC074v_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getRequestProperty(key);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KC_T8P_tEeC36v2Jr-YNEw" name="getURL" specification="_KC7CgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KC_T8f_tEeC36v2Jr-YNEw" type="_J3nxdP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getURL();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDHPwP_tEeC36v2Jr-YNEw" name="getUseCaches" specification="_KDDlYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDH20P_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.getUseCaches();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDQZsP_tEeC36v2Jr-YNEw" name="hashCode" specification="_KDMIQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDQZsf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return delegateConnection.hashCode();&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDbY0P_tEeC36v2Jr-YNEw" name="setAllowUserInteraction" specification="_KDYVgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDbY0f_tEeC36v2Jr-YNEw" name="allowuserinteraction" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setAllowUserInteraction(allowuserinteraction);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDj7sP_tEeC36v2Jr-YNEw" name="setConnectTimeout" specification="_KDhfcP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDj7sf_tEeC36v2Jr-YNEw" name="timeout" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setConnectTimeout(timeout);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDrQcP_tEeC36v2Jr-YNEw" name="setDefaultUseCaches" specification="_KDo0MP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDrQcf_tEeC36v2Jr-YNEw" name="defaultusecaches" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setDefaultUseCaches(defaultusecaches);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KDzMQP_tEeC36v2Jr-YNEw" name="setDoInput" specification="_KDwwAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDzMQf_tEeC36v2Jr-YNEw" name="doinput" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setDoInput(doinput);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KD89QP_tEeC36v2Jr-YNEw" name="setDoOutput" specification="_KD558P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KD89Qf_tEeC36v2Jr-YNEw" name="dooutput" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setDoOutput(dooutput);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KEE5EP_tEeC36v2Jr-YNEw" name="setIfModifiedSince" specification="_KECc0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KEE5Ef_tEeC36v2Jr-YNEw" name="ifmodifiedsince" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setIfModifiedSince(ifmodifiedsince);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KEODAP_tEeC36v2Jr-YNEw" name="setReadTimeout" specification="_KEK_sP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KEODAf_tEeC36v2Jr-YNEw" name="timeout" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setReadTimeout(timeout);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KEfv0P_tEeC36v2Jr-YNEw" name="setRequestProperty" specification="_KEdTkP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KEfv0f_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KEfv0v_tEeC36v2Jr-YNEw" name="value" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setRequestProperty(key, value);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KE7NoP_tEeC36v2Jr-YNEw" name="setUseCaches" specification="_KElPYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KE7Nof_tEeC36v2Jr-YNEw" name="usecaches" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		delegateConnection.setUseCaches(usecaches);&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_KFDwgP_tEeC36v2Jr-YNEw" name="toString" specification="_KFAtMP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KFDwgf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <language>JAVA</language>
+                  <body>&#xD;
+		return &quot;FileDistinctionURLConnection[&quot; + delegateConnection.toString()&#xD;
+				+ &quot;]&quot;;&#xD;
+	</body>
+                </ownedBehavior>
+                <ownedOperation xmi:id="_J-VdcP_tEeC36v2Jr-YNEw" name="connect" visibility="public" method="_J-YgwP_tEeC36v2Jr-YNEw"/>
+                <ownedOperation xmi:id="_J-eAUP_tEeC36v2Jr-YNEw" name="getInputStream" visibility="public" method="_J-hDoP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-eAUf_tEeC36v2Jr-YNEw" type="_J-Ovwv_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J-ufAP_tEeC36v2Jr-YNEw" name="addRequestProperty" visibility="public" method="_J-yJYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-ufAf_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J-ufAv_tEeC36v2Jr-YNEw" name="value" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J-9IgP_tEeC36v2Jr-YNEw" name="equals" visibility="public" method="_J_CoEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J-9vkP_tEeC36v2Jr-YNEw" name="arg0" type="_J-1MsP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_J-9vkf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_G5gP_tEeC36v2Jr-YNEw" name="getAllowUserInteraction" visibility="public" method="_J_LK8P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_G5gf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_OOQP_tEeC36v2Jr-YNEw" name="getConnectTimeout" visibility="public" method="_J_RRkP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_OOQf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_WKEP_tEeC36v2Jr-YNEw" name="getContent" visibility="public" method="_J_YmUP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_WKEf_tEeC36v2Jr-YNEw" type="_J-1MsP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_hwQP_tEeC36v2Jr-YNEw" name="getContent" visibility="public" method="_J_kzkP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_hwQf_tEeC36v2Jr-YNEw" name="classes" type="_J_bCkP_tEeC36v2Jr-YNEw">
+                    <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J_hwQv_tEeC36v2Jr-YNEw" value="*"/>
+                  </ownedParameter>
+                  <ownedParameter xmi:id="_J_hwQ__tEeC36v2Jr-YNEw" type="_J-1MsP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_qTIP_tEeC36v2Jr-YNEw" name="getContentEncoding" visibility="public" method="_J_tWcP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_qTIf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_yO8P_tEeC36v2Jr-YNEw" name="getContentLength" visibility="public" method="_J_2gYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_yO8f_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_J_9OEP_tEeC36v2Jr-YNEw" name="getContentType" visibility="public" method="_J__qUP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_J_9OEf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KADUsP_tEeC36v2Jr-YNEw" name="getDate" visibility="public" method="_KAFw8P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KADUsf_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KAI0QP_tEeC36v2Jr-YNEw" name="getDefaultUseCaches" visibility="public" method="_KAahEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAI0Qf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KAdkYP_tEeC36v2Jr-YNEw" name="getDoInput" visibility="public" method="_KAgAoP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAdkYf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KAjD8P_tEeC36v2Jr-YNEw" name="getDoOutput" visibility="public" method="_KAmHQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAjD8f_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KApKkP_tEeC36v2Jr-YNEw" name="getExpiration" visibility="public" method="_KArm0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KApKkf_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KAxGYP_tEeC36v2Jr-YNEw" name="getHeaderField" visibility="public" method="_KA0JsP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KAxGYf_tEeC36v2Jr-YNEw" name="n" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KAxGYv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KA_I0P_tEeC36v2Jr-YNEw" name="getHeaderField" visibility="public" method="_KBCMIP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KA_I0f_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KA_I0v_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KBL9IP_tEeC36v2Jr-YNEw" name="getHeaderFieldDate" visibility="public" method="_KBPngP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBL9If_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBL9Iv_tEeC36v2Jr-YNEw" name="Default" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBL9I__tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KBZ_kP_tEeC36v2Jr-YNEw" name="getHeaderFieldInt" visibility="public" method="_KBeRAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBZ_kf_tEeC36v2Jr-YNEw" name="name" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBZ_kv_tEeC36v2Jr-YNEw" name="Default" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBZ_k__tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KBk-sP_tEeC36v2Jr-YNEw" name="getHeaderFieldKey" visibility="public" method="_KBopEP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBk-sf_tEeC36v2Jr-YNEw" name="n" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KBk-sv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KBuIoP_tEeC36v2Jr-YNEw" name="getHeaderFields" visibility="public" method="_KBxzAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KBuIof_tEeC36v2Jr-YNEw" type="_J9qvEv_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KB2EcP_tEeC36v2Jr-YNEw" name="getIfModifiedSince" visibility="public" method="_KB5u0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KB2Ecf_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KB9ZMP_tEeC36v2Jr-YNEw" name="getLastModified" visibility="public" method="_KCAcgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KB9ZMf_tEeC36v2Jr-YNEw" type="_J3jgAP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KCGjIP_tEeC36v2Jr-YNEw" name="getOutputStream" visibility="public" method="_KCKNgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCGjIf_tEeC36v2Jr-YNEw" type="_J-PW0P_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KCPtEP_tEeC36v2Jr-YNEw" name="getPermission" visibility="public" method="_KCSwYP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCPtEf_tEeC36v2Jr-YNEw" type="_J-PW1f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KCXB0P_tEeC36v2Jr-YNEw" name="getReadTimeout" visibility="public" method="_KCbTQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCXB0f_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KChZ4P_tEeC36v2Jr-YNEw" name="getRequestProperties" visibility="public" method="_KClrUP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KChZ4f_tEeC36v2Jr-YNEw" type="_J9qvEv_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KCx4kP_tEeC36v2Jr-YNEw" name="getRequestProperty" visibility="public" method="_KC074P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KCx4kf_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KCx4kv_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KC7CgP_tEeC36v2Jr-YNEw" name="getURL" visibility="public" method="_KC_T8P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KC7pkP_tEeC36v2Jr-YNEw" type="_J3nxdP_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDDlYP_tEeC36v2Jr-YNEw" name="getUseCaches" visibility="public" method="_KDHPwP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDDlYf_tEeC36v2Jr-YNEw" type="_J3i48f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDMIQP_tEeC36v2Jr-YNEw" name="hashCode" visibility="public" method="_KDQZsP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDMIQf_tEeC36v2Jr-YNEw" type="_J3i49v_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDYVgP_tEeC36v2Jr-YNEw" name="setAllowUserInteraction" visibility="public" method="_KDbY0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDYVgf_tEeC36v2Jr-YNEw" name="allowuserinteraction" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDhfcP_tEeC36v2Jr-YNEw" name="setConnectTimeout" visibility="public" method="_KDj7sP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDhfcf_tEeC36v2Jr-YNEw" name="timeout" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDo0MP_tEeC36v2Jr-YNEw" name="setDefaultUseCaches" visibility="public" method="_KDrQcP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDo0Mf_tEeC36v2Jr-YNEw" name="defaultusecaches" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KDwwAP_tEeC36v2Jr-YNEw" name="setDoInput" visibility="public" method="_KDzMQP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KDwwAf_tEeC36v2Jr-YNEw" name="doinput" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KD558P_tEeC36v2Jr-YNEw" name="setDoOutput" visibility="public" method="_KD89QP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KD558f_tEeC36v2Jr-YNEw" name="dooutput" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KECc0P_tEeC36v2Jr-YNEw" name="setIfModifiedSince" visibility="public" method="_KEE5EP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KECc0f_tEeC36v2Jr-YNEw" name="ifmodifiedsince" type="_J3jgAP_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KEK_sP_tEeC36v2Jr-YNEw" name="setReadTimeout" visibility="public" method="_KEODAP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KEK_sf_tEeC36v2Jr-YNEw" name="timeout" type="_J3i49v_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KEdTkP_tEeC36v2Jr-YNEw" name="setRequestProperty" visibility="public" method="_KEfv0P_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KEdTkf_tEeC36v2Jr-YNEw" name="key" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                  <ownedParameter xmi:id="_KEdTkv_tEeC36v2Jr-YNEw" name="value" type="_J32a8f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KElPYP_tEeC36v2Jr-YNEw" name="setUseCaches" visibility="public" method="_KE7NoP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KElPYf_tEeC36v2Jr-YNEw" name="usecaches" type="_J3i48f_tEeC36v2Jr-YNEw"/>
+                </ownedOperation>
+                <ownedOperation xmi:id="_KFAtMP_tEeC36v2Jr-YNEw" name="toString" visibility="public" method="_KFDwgP_tEeC36v2Jr-YNEw">
+                  <ownedParameter xmi:id="_KFAtMf_tEeC36v2Jr-YNEw" type="_J32a8f_tEeC36v2Jr-YNEw" direction="return"/>
+                </ownedOperation>
+              </packagedElement>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-q__tEeC36v2Jr-YNEw" supplier="_J4xoBP_tEeC36v2Jr-YNEw" client="_J3l8QP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFE-rP_tEeC36v2Jr-YNEw" supplier="_J3nxcf_tEeC36v2Jr-YNEw" client="_J3l8QP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFFlsP_tEeC36v2Jr-YNEw" supplier="_J41SYP_tEeC36v2Jr-YNEw" client="_J3l8QP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFFlsf_tEeC36v2Jr-YNEw" supplier="_J-PW1P_tEeC36v2Jr-YNEw" client="_J3l8QP_tEeC36v2Jr-YNEw"/>
+              <packagedElement xmi:type="uml:Usage" xmi:id="_KFFlsv_tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3l8QP_tEeC36v2Jr-YNEw"/>
+            </packagedElement>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_KFDwgv_tEeC36v2Jr-YNEw" supplier="_J3nxcf_tEeC36v2Jr-YNEw" client="_J3jgBv_tEeC36v2Jr-YNEw"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_KFDwg__tEeC36v2Jr-YNEw" supplier="_J39vsP_tEeC36v2Jr-YNEw" client="_J3jgBv_tEeC36v2Jr-YNEw"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_KFDwhP_tEeC36v2Jr-YNEw" supplier="_J39vtf_tEeC36v2Jr-YNEw" client="_J3jgBv_tEeC36v2Jr-YNEw"/>
+            <packagedElement xmi:type="uml:Usage" xmi:id="_KFDwhf_tEeC36v2Jr-YNEw" supplier="_J39vuf_tEeC36v2Jr-YNEw" client="_J3jgBv_tEeC36v2Jr-YNEw"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_J4xoAP_tEeC36v2Jr-YNEw" name="osgi">
+        <packagedElement xmi:type="uml:Package" xmi:id="_J4xoAf_tEeC36v2Jr-YNEw" name="baseadaptor">
+          <packagedElement xmi:type="uml:Package" xmi:id="_J4xoAv_tEeC36v2Jr-YNEw" name="hooks">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J4xoA__tEeC36v2Jr-YNEw" name="AdaptorHook"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J4zdMP_tEeC36v2Jr-YNEw" name="BaseAdaptor"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J8aK0P_tEeC36v2Jr-YNEw" name="HookConfigurator"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J8aK0v_tEeC36v2Jr-YNEw" name="HookRegistry"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_J4zdM__tEeC36v2Jr-YNEw" name="framework">
+          <packagedElement xmi:type="uml:Package" xmi:id="_J4zdNP_tEeC36v2Jr-YNEw" name="log">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J40EQP_tEeC36v2Jr-YNEw" name="FrameworkLog"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J39vuP_tEeC36v2Jr-YNEw" name="osgi">
+      <packagedElement xmi:type="uml:Package" xmi:id="_J39vuf_tEeC36v2Jr-YNEw" name="framework">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J3-WwP_tEeC36v2Jr-YNEw" name="Bundle"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_J4EdYP_tEeC36v2Jr-YNEw" name="hooks">
+          <packagedElement xmi:type="uml:Package" xmi:id="_J4EdYf_tEeC36v2Jr-YNEw" name="bundle">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J4EdYv_tEeC36v2Jr-YNEw" name="FindHook"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J4UVAP_tEeC36v2Jr-YNEw" name="EventHook"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_J40rUv_tEeC36v2Jr-YNEw" name="resolver">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J40rU__tEeC36v2Jr-YNEw" name="ResolverHookFactory"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J8g4gP_tEeC36v2Jr-YNEw" name="ResolverHook"/>
+          </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="_J9TisP_tEeC36v2Jr-YNEw" name="service">
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J9Tisf_tEeC36v2Jr-YNEw" name="FindHook"/>
+            <packagedElement xmi:type="uml:DataType" xmi:id="_J9qvEP_tEeC36v2Jr-YNEw" name="EventListenerHook"/>
+            <packagedElement xmi:type="uml:Package" xmi:id="_J9rWI__tEeC36v2Jr-YNEw" name="ListenerHook">
+              <packagedElement xmi:type="uml:DataType" xmi:id="_J9rWJP_tEeC36v2Jr-YNEw" name="ListenerInfo"/>
+            </packagedElement>
+          </packagedElement>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J4FEcf_tEeC36v2Jr-YNEw" name="BundleContext"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J4UVBf_tEeC36v2Jr-YNEw" name="BundleEvent"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J40EQ__tEeC36v2Jr-YNEw" name="BundleException"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J40rUP_tEeC36v2Jr-YNEw" name="ServiceRegistration"/>
+        <packagedElement xmi:type="uml:Package" xmi:id="_J8g4hf_tEeC36v2Jr-YNEw" name="wiring">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J8hfkP_tEeC36v2Jr-YNEw" name="BundleCapability"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J8hfkv_tEeC36v2Jr-YNEw" name="BundleRequirement"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J8hflP_tEeC36v2Jr-YNEw" name="BundleRevision"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J9UJxP_tEeC36v2Jr-YNEw" name="ServiceReference"/>
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J9rWIP_tEeC36v2Jr-YNEw" name="ServiceEvent"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_J40rVf_tEeC36v2Jr-YNEw" name="service">
+        <packagedElement xmi:type="uml:Package" xmi:id="_J41SYP_tEeC36v2Jr-YNEw" name="url">
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J41SYf_tEeC36v2Jr-YNEw" name="URLConstants"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J41SY__tEeC36v2Jr-YNEw" name="URLStreamHandlerService"/>
+          <packagedElement xmi:type="uml:DataType" xmi:id="_J9-4IP_tEeC36v2Jr-YNEw" name="AbstractURLStreamHandlerService"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_J3nxcP_tEeC36v2Jr-YNEw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_J3nxcf_tEeC36v2Jr-YNEw" name="net">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J3nxcv_tEeC36v2Jr-YNEw" name="MalformedURLException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J3nxdP_tEeC36v2Jr-YNEw" name="URL"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J4yPEv_tEeC36v2Jr-YNEw" name="URLConnection"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J32a8P_tEeC36v2Jr-YNEw" name="lang">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J32a8f_tEeC36v2Jr-YNEw" name="String"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J73YQP_tEeC36v2Jr-YNEw" name="Throwable"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J-1MsP_tEeC36v2Jr-YNEw" name="Object"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J_bCkP_tEeC36v2Jr-YNEw" name="Class"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J39vsP_tEeC36v2Jr-YNEw" name="util">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J39vsf_tEeC36v2Jr-YNEw" name="Collection"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J39vs__tEeC36v2Jr-YNEw" name="HashSet"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_J39vtf_tEeC36v2Jr-YNEw" name="logging">
+        <packagedElement xmi:type="uml:DataType" xmi:id="_J39vtv_tEeC36v2Jr-YNEw" name="Logger"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J4yPFP_tEeC36v2Jr-YNEw" name="Hashtable"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J4y2IP_tEeC36v2Jr-YNEw" name="Properties"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J9qvEv_tEeC36v2Jr-YNEw" name="Map"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J-PW1__tEeC36v2Jr-YNEw" name="List"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J4xoBP_tEeC36v2Jr-YNEw" name="io">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J4yPEP_tEeC36v2Jr-YNEw" name="IOException"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J-Ovwv_tEeC36v2Jr-YNEw" name="InputStream"/>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J-PW0P_tEeC36v2Jr-YNEw" name="OutputStream"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_J-PW1P_tEeC36v2Jr-YNEw" name="security">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_J-PW1f_tEeC36v2Jr-YNEw" name="Permission"/>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

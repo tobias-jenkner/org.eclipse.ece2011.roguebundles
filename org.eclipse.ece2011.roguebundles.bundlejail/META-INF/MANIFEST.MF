@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Example for the Eclipse Con Europe 2011 talk Rogue Bundles: Go to jail
+Bundle-SymbolicName: org.eclipse.ece2011.roguebundles.bundlejail
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: org.eclipse.osgi
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
