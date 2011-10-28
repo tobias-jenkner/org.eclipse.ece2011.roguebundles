@@ -6,6 +6,14 @@ import java.util.logging.Logger;
 
 import org.osgi.framework.Bundle;
 
+/**
+ * This class can be used to filter a collection of objects &lt;T&gt; based on
+ * the JailCell / region / compartment it belongs to.
+ * 
+ * @author tobias.jenkner
+ * 
+ * @param <T>
+ */
 public abstract class BundleJailCellFilter<T> {
 
 	private static final Logger logger = Logger
@@ -19,13 +27,13 @@ public abstract class BundleJailCellFilter<T> {
 
 	private final Collection<T> candidates;
 
-	private final BundleJailCell bundleCompartment;
+	private final BundleJailCell jailCell;
 
 	private final Bundle initiator;
 
 	public BundleJailCellFilter(Bundle initiator, Collection<T> candidates) {
 		this.initiator = initiator;
-		this.bundleCompartment = new BundleJailCell(initiator.getLocation());
+		this.jailCell = new BundleJailCell(initiator.getLocation());
 		this.candidates = candidates;
 		filterCandidates();
 	}
@@ -33,23 +41,30 @@ public abstract class BundleJailCellFilter<T> {
 	private void filterCandidates() {
 		for (T bundleReference : candidates) {
 			Bundle bundle = adaptToBundle(bundleReference);
-			BundleJailCell toCheck = new BundleJailCell(
-					bundle.getLocation());
-			if (bundleCompartment.matches(toCheck)) {
+			BundleJailCell toCheck = new BundleJailCell(bundle.getLocation());
+			if (jailCell.matches(toCheck)) {
 				logger.info("exact match found for requiring bundle '"
-						+ initiator.getSymbolicName() + "' in compartment '"
-						+ bundleCompartment + "': " + bundle.getSymbolicName());
+						+ initiator.getSymbolicName() + "' in '"
+						+ jailCell + "': " + bundle.getSymbolicName());
 				exactMatches.add(bundleReference);
 			} else if (toCheck.isDefault()) {
 				logger.info("default match found for requiring bundle '"
-						+ initiator.getSymbolicName() + "' in compartment '"
-						+ bundleCompartment + "': " + bundle.getSymbolicName());
+						+ initiator.getSymbolicName() + "' in '"
+						+ jailCell + "': " + bundle.getSymbolicName());
 				defaultMatches.add(bundleReference);
 			} else
 				noMatches.add(bundleReference);
 		}
 	}
 
+	/**
+	 * Implement how <code>&lt;T&gt;</code> can be adapted to the corresponding
+	 * <code>Bundle</code> object.
+	 * 
+	 * @param t a representation of a <code>Bundle</code>
+	 * @return the reference to the corresponding <code>Bundle</code> object.
+	 */
+	//FIXME maybe we could use adaptermanager for this.
 	protected abstract Bundle adaptToBundle(T t);
 
 	/**

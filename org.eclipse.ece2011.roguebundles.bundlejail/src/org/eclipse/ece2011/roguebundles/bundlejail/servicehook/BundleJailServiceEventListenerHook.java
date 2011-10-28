@@ -10,6 +10,11 @@ import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.hooks.service.EventListenerHook;
 import org.osgi.framework.hooks.service.ListenerHook.ListenerInfo;
 
+/**
+ * Isolation for {@link ServiceEvent} publishing based on the {@link BundleJailCellFilter}.
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailServiceEventListenerHook implements EventListenerHook {
 
 	@Override

@@ -9,6 +9,14 @@ import java.security.Permission;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This URL connection processes URLs that are wrapped with another URL
+ * containing an additional query part.
+ * 
+ * The query part 
+ * 
+ * @author tobias.jenkner
+ */
 public class FileDistinctionURLConnection extends URLConnection {
 
 	private URL delegate;
@@ -17,7 +25,9 @@ public class FileDistinctionURLConnection extends URLConnection {
 
 	protected FileDistinctionURLConnection(URL url) throws IOException {
 		super(url);
-		delegate = new URL("file", url.getHost(), url.getPort(), url.getPath());
+		String string = url.toString();
+		delegate = new URL(string.substring(url.getProtocol().length() + 1,
+				string.length() - url.getQuery().length() - 1));
 		delegateConnection = delegate.openConnection();
 	}
 

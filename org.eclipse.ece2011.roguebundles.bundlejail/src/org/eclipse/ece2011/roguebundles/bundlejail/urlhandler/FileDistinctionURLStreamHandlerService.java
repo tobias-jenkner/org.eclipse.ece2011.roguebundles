@@ -7,6 +7,11 @@ import java.net.URLConnection;
 import org.osgi.service.url.AbstractURLStreamHandlerService;
 import org.osgi.service.url.URLStreamHandlerService;
 
+/**
+ * {@link URLStreamHandlerService} for opening {@link FileDistinctionURLConnection}s.
+ * 
+ * @author tobias.jenkner
+ */
 public class FileDistinctionURLStreamHandlerService extends
 		AbstractURLStreamHandlerService implements URLStreamHandlerService {
 

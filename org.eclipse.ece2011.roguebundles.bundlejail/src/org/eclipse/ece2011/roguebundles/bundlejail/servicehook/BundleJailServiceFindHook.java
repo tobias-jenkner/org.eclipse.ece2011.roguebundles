@@ -8,6 +8,11 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.hooks.service.FindHook;
 
+/**
+ * Isolation for service lookup based on the {@link BundleJailCellFilter}.
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailServiceFindHook implements FindHook {
 
 	@Override

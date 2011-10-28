@@ -21,6 +21,12 @@ import org.osgi.framework.hooks.resolver.ResolverHookFactory;
 import org.osgi.service.url.URLConstants;
 import org.osgi.service.url.URLStreamHandlerService;
 
+/**
+ * This class registers all osgi framework services needed for the bundlejail
+ * isolation.
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailAdapterHook implements AdaptorHook {
 
 	public static final String PROTOCOL = "filedistinction";
@@ -46,13 +52,12 @@ public class BundleJailAdapterHook implements AdaptorHook {
 	@Override
 	public void frameworkStart(BundleContext context) throws BundleException {
 		resolverHookFactoryServiceRegistration = context.registerService(
-				ResolverHookFactory.class, new BundleJailResolverHookFactory(), null);
+				ResolverHookFactory.class, new BundleJailResolverHookFactory(),
+				null);
 		bundleFindHookServiceRegistration = context.registerService(
-				BundleJailFindHook.class,
-				new BundleJailFindHook(), null);
+				BundleJailFindHook.class, new BundleJailFindHook(), null);
 		bundleEventHookServiceRegistration = context.registerService(
-				BundleJailEventHook.class,
-				new BundleJailEventHook(), null);
+				BundleJailEventHook.class, new BundleJailEventHook(), null);
 		serviceFindHookServiceRegistration = context.registerService(
 				BundleJailServiceFindHook.class,
 				new BundleJailServiceFindHook(), null);

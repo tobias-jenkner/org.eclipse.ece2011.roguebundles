@@ -3,10 +3,13 @@ package org.eclipse.ece2011.roguebundles.bundlejail;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+/**
+ * This class provides information which jail-cell / compartment / region a
+ * bundle belongs to.
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailCell {
-
-	// private static final Logger logger = Logger
-	// .getLogger(BundleCompartment.class.getName());
 
 	private static final String DEFAULT_NAME = "default";
 
@@ -14,7 +17,7 @@ public class BundleJailCell {
 		return name.equals(DEFAULT_NAME);
 	}
 
-	private static String getCompartmentName(final String locationURL) {
+	private static String getJailCellName(final String locationURL) {
 		String name;
 		try {
 			String trimmedLocationURL;
@@ -42,7 +45,7 @@ public class BundleJailCell {
 	private final String name;
 
 	public BundleJailCell(String bundleLocationURL) {
-		this.name = getCompartmentName(bundleLocationURL);
+		this.name = getJailCellName(bundleLocationURL);
 	}
 
 	public boolean matches(BundleJailCell toCheck) {
@@ -57,7 +60,7 @@ public class BundleJailCell {
 	public String toString() {
 		return "BundleJailCell [" + name + "]";
 	}
-	
+
 	public String getName() {
 		return name;
 	}

@@ -7,6 +7,11 @@ import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.hooks.bundle.FindHook;
 
+/**
+ * Isolation for {@link Bundle} lookup based on the {@link BundleJailCellFilter}
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailFindHook implements FindHook {
 
 	@Override

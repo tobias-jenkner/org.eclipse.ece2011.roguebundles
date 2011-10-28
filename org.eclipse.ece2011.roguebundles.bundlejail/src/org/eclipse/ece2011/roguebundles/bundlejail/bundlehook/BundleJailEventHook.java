@@ -8,6 +8,11 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.BundleEvent;
 import org.osgi.framework.hooks.bundle.EventHook;
 
+/**
+ * Isolation for {@link BundleEvent} publishing based on the {@link BundleJailCellFilter}.
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailEventHook implements EventHook {
 
 	@Override

@@ -9,6 +9,11 @@ import org.osgi.framework.wiring.BundleCapability;
 import org.osgi.framework.wiring.BundleRequirement;
 import org.osgi.framework.wiring.BundleRevision;
 
+/**
+ * {@link ResolverHook} based on the {@link BundleJailCellFilter}
+ * 
+ * @author tobias.jenkner
+ */
 public class BundleJailResolverHook implements ResolverHook {
 
 	private static class BundleCapabilityBundleJailCellFilter extends
@@ -33,7 +38,7 @@ public class BundleJailResolverHook implements ResolverHook {
 	@Override
 	public void filterSingletonCollisions(BundleCapability singleton,
 			Collection<BundleCapability> collisionCandidates) {
-		System.err.println("CECResolverHook.filterSingletonCollisions");
+		System.err.println("BundleJailResolverHook.filterSingletonCollisions");
 		BundleJailCellFilter<BundleCapability> filter = new BundleCapabilityBundleJailCellFilter(
 				singleton.getRevision().getBundle(), collisionCandidates);
 		filter.removeNonMatching();
@@ -49,8 +54,7 @@ public class BundleJailResolverHook implements ResolverHook {
 
 	@Override
 	public void end() {
-		// TODO Auto-generated method stub
-		System.err.println("CECResolverHook.end");
+		System.err.println("BundleJailResolverHook.end");
 	}
 
 }
