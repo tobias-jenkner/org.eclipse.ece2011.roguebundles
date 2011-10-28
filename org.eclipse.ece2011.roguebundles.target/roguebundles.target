@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="roguebundles" sequenceNumber="2">
+<locations>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.rcp.feature.group" version="3.7.1.r37x_v20110729-9DB5FmNFnFLSFCtLxnRfMqt15A4A"/>
+<unit id="org.eclipse.rcp.source.feature.group" version="3.7.1.r37x_v20110729-9DB5FmNFnFLSFCtLxnRfMqt15A4A"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
+</location>
+<location path="${project_loc:/org.eclipse.ece2011.roguebundles.target}/plugins" type="Directory"/>
+<location includeAllPlatforms="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+<unit id="org.eclipse.equinox.serverside.sdk.feature.group" version="3.7.1.R37x_v20110907-7u7PFvHFN5LiN7iMI1T3vR_k8Ugx"/>
+<repository location="http://download.eclipse.org/releases/indigo/"/>
+</location>
+</locations>
+</target>

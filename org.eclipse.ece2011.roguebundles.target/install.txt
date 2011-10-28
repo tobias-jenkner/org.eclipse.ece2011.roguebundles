@@ -1,0 +1,4 @@
+install filedistinction:file:/C:/develop/workspace-rogue-bundles/org.eclipse.ece2011.roguebundles.defaulthttpparams.a?A
+install filedistinction:file:C:/develop/workspace-rogue-bundles/org.eclipse.ece2011.roguebundles.defaulthttpparams.b?B
+install filedistinction:file:C:/develop/workspace-rogue-bundles/org.eclipse.ece2011.roguebundles.httpclient?A
+install filedistinction:file:C:/develop/workspace-rogue-bundles/org.eclipse.ece2011.roguebundles.httpclient?B

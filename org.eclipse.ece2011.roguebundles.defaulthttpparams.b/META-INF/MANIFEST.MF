@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: defaulthttpparams.b
+Bundle-SymbolicName: org.eclipse.ece2011.roguebundles.defaulthttpparams.b
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.eclipse.ece2011.roguebundles.httpclientb.Activator
+Require-Bundle: org.eclipse.core.runtime,
+ org.apache.commons.httpclient;bundle-version="3.1.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: bin/,
+ .
